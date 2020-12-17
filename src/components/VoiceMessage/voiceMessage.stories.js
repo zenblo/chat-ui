@@ -2,8 +2,8 @@ import React from "react";
 import VoiceMessage from ".";
 
 export default {
-  title: "VoiceMessage",
-  component: VoiceMessage
+  title: "UI 组件/VoiceMessage",
+  component: VoiceMessage,
 };
 
-export const Default = () => <VoiceMessage>默认</VoiceMessage>;
+export const Default = () => <VoiceMessage time="01:25" />;
