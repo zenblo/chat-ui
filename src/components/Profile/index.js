@@ -10,7 +10,7 @@ import StyledProfile, {
   CloseIcon,
 } from "./style";
 import "styled-components/macro";
-import face from "assets/images/face-male-3.jpg";
+import face from "assets/images/face-male-1.jpg";
 import Avatar from "components/Avatar";
 import Paragraph from "components/Paragraph";
 import Emoji from "components/Emoji";
@@ -29,27 +29,57 @@ import photo2 from "assets/images/photo2.jpg";
 import photo3 from "assets/images/photo3.jpg";
 
 import { ReactComponent as Cross } from "assets/icons/cross.svg";
+import Button from "components/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
 
-function Profile({ children, ...rest }) {
+function Profile({
+  showEditBtn,
+  showCloseIcon = true,
+  onEdit,
+  status,
+  children,
+  ...rest
+}) {
   return (
     <StyledProfile {...rest}>
-      <CloseIcon icon={Cross} />
+      {showCloseIcon && <CloseIcon icon={Cross} />}
       <Avatar
         css={`
           margin: 26px 0;
+          grid-area: 1 / 1 / 3 / 2;
         `}
         src={face}
         size="160px"
-        status="online"
+        status={status}
         statusIconSize="25px"
       />
+      {showEditBtn && (
+        <Button
+          size="52px"
+          onClick={onEdit}
+          css={`
+            grid-area: 1 / 1 / 3 / 2;
+            align-self: end;
+            margin-left: 100px;
+            z-index: 10;
+          `}
+        >
+          <FontAwesomeIcon
+            css={`
+              font-size: 24px;
+            `}
+            icon={faPen}
+          />
+        </Button>
+      )}
       <Paragraph
         size="xlarge"
         css={`
           margin-bottom: 12px;
         `}
       >
-        慕容天宇
+        李铭浩
       </Paragraph>
       <Paragraph
         size="medium"
@@ -84,8 +114,8 @@ function Profile({ children, ...rest }) {
       />
       <ContactSection>
         <Description label="联系电话">+86 18688888888</Description>
-        <Description label="电子邮件">admin@fh.com</Description>
-        <Description label="个人网站">https://zxuqian.cn</Description>
+        <Description label="电子邮件">admin@pp.com</Description>
+        <Description label="个人网站">https://demowwwnet.cn</Description>
       </ContactSection>
       <Seperator
         css={`
