@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import StyledSwitch from "./style";
+import StyledSwitch, { Checkbox, Slider } from "./style";
 
-function Switch({children,...rest}) {
+function Switch({ children, ...rest }) {
   return (
     <StyledSwitch {...rest}>
-      {children}
+      <Checkbox />
+      <Slider />
     </StyledSwitch>
   );
 }
 
 Switch.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 };
 
 export default Switch;
