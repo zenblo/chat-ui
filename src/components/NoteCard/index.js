@@ -8,13 +8,13 @@ import StyledNoteCard, {
   NotePublishTime,
 } from "./style";
 
-function NoteCard({ children, ...rest }) {
+function NoteCard({ note, children, ...rest }) {
   return (
     <StyledNoteCard {...rest}>
-      <NoteImage src={note1} />
-      <NoteTitle>这是笔记标题</NoteTitle>
-      <NoteExcerpt>这是笔记内容摘要</NoteExcerpt>
-      <NotePublishTime>2020-02-08</NotePublishTime>
+      <NoteImage src={note.image} />
+      <NoteTitle>{note.title}</NoteTitle>
+      <NoteExcerpt>{note.excerpt}</NoteExcerpt>
+      <NotePublishTime>{note.publishedAt}</NotePublishTime>
     </StyledNoteCard>
   );
 }
@@ -24,4 +24,3 @@ NoteCard.propTypes = {
 };
 
 export default NoteCard;
-

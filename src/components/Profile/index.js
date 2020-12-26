@@ -89,7 +89,7 @@ function Profile({
           margin-bottom: 18px;
         `}
       >
-        北京市 朝阳区
+        重庆市 巴南区
       </Paragraph>
       <Paragraph
         css={`
@@ -115,8 +115,8 @@ function Profile({
       />
       <ContactSection>
         <Description label="联系电话">+86 18688888888</Description>
-        <Description label="电子邮件">admin@fh.com</Description>
-        <Description label="个人网站">https://zxuqian.cn</Description>
+        <Description label="电子邮件">admin@pp.com</Description>
+        <Description label="个人网站">https://denowebcn.cn</Description>
       </ContactSection>
       <Seperator
         css={`

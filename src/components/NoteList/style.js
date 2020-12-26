@@ -11,4 +11,3 @@ const StyledNoteList = styled.div``;
 
 export default StyledNoteList;
 export { Notes };
-

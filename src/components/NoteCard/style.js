@@ -39,4 +39,3 @@ const StyledNoteCard = styled.div`
 
 export default StyledNoteCard;
 export { NoteImage, NoteTitle, NoteExcerpt, NotePublishTime };
-

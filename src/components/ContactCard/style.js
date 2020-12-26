@@ -26,4 +26,3 @@ const StyledContactCard = styled.div`
 
 export default StyledContactCard;
 export { Name, Intro };
-

@@ -4,12 +4,12 @@ import StyledContactCard, { Intro, Name } from "./style";
 import face from "assets/images/face-male-1.jpg";
 import Avatar from "components/Avatar";
 
-function ContactCard({ children, ...rest }) {
+function ContactCard({ contact, children, ...rest }) {
   return (
     <StyledContactCard {...rest}>
-      <Avatar src={face} status="online" />
-      <Name>李铭浩</Name>
-      <Intro>我是前端工程师</Intro>
+      <Avatar src={contact.avatar} status="online" />
+      <Name>{contact.name}</Name>
+      <Intro>{contact.intro}</Intro>
     </StyledContactCard>
   );
 }
@@ -19,4 +19,3 @@ ContactCard.propTypes = {
 };
 
 export default ContactCard;
-
