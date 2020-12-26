@@ -13,7 +13,9 @@ import {
   faEllipsisH,
   faCog,
 } from "@fortawesome/free-solid-svg-icons";
+
 import "styled-components/macro";
+import { Link, useLocation, matchPath } from "react-router-dom";
 
 function NavBar({ ...rest }) {
   return (
@@ -37,14 +39,19 @@ function NavBar({ ...rest }) {
   );
 }
 
-function MenuItem({ icon, active, showBadge, ...rest }) {
+function MenuItem({ to, icon, showBadge, ...rest }) {
+  const loc = useLocation();
+  const active = !!matchPath(loc.pathname, {
+    path: to,
+    exact: to === "/",
+  });
   return (
     <StyledMenuItem active={active} {...rest}>
-      <a href="#">
+      <Link to={to}>
         <Badge show={showBadge}>
           <MenuIcon active={active} icon={icon} />
         </Badge>
-      </a>
+      </Link>
     </StyledMenuItem>
   );
 }
