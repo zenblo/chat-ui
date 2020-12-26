@@ -11,4 +11,3 @@ const StyledContactList = styled.div``;
 
 export default StyledContactList;
 export { Contacts };
-

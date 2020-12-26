@@ -15,9 +15,16 @@ import { DropdownItem } from "components/Dropdown/style";
 import Dropdown from "components/Dropdown";
 import Seperator from "components/Seperator";
 
-function TitleBar({ onAvatarClick, onVideoClicked, children, ...rest }) {
+function TitleBar({
+  animeProps,
+  style,
+  onAvatarClick,
+  onVideoClicked,
+  children,
+  ...rest
+}) {
   return (
-    <StyledTitleBar {...rest}>
+    <StyledTitleBar style={{ ...style, ...animeProps }} {...rest}>
       <Avatar onClick={onAvatarClick} status="offline" src={face} />
       <Title>
         <Paragraph size="large">慕容天宇</Paragraph>

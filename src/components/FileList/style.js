@@ -11,4 +11,3 @@ const StyledFileList = styled.div``;
 
 export default StyledFileList;
 export { Files };
-
