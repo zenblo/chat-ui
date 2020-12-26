@@ -19,4 +19,3 @@ export const WithDescription = () => (
 export const WithMenu = () => (
   <SettingsItem label="有子菜单的设置项" type="menu" />
 );
-

@@ -10,7 +10,7 @@ import StyledProfile, {
   CloseIcon,
 } from "./style";
 import "styled-components/macro";
-import face from "assets/images/face-male-1.jpg";
+import face from "assets/images/face-male-3.jpg";
 import Avatar from "components/Avatar";
 import Paragraph from "components/Paragraph";
 import Emoji from "components/Emoji";
@@ -36,6 +36,7 @@ import { faPen } from "@fortawesome/free-solid-svg-icons";
 function Profile({
   showEditBtn,
   showCloseIcon = true,
+  onCloseClick,
   onEdit,
   status,
   children,
@@ -43,7 +44,7 @@ function Profile({
 }) {
   return (
     <StyledProfile {...rest}>
-      {showCloseIcon && <CloseIcon icon={Cross} />}
+      {showCloseIcon && <CloseIcon icon={Cross} onClick={onCloseClick} />}
       <Avatar
         css={`
           margin: 26px 0;
@@ -79,7 +80,7 @@ function Profile({
           margin-bottom: 12px;
         `}
       >
-        李铭浩
+        慕容天宇
       </Paragraph>
       <Paragraph
         size="medium"
@@ -114,8 +115,8 @@ function Profile({
       />
       <ContactSection>
         <Description label="联系电话">+86 18688888888</Description>
-        <Description label="电子邮件">admin@pp.com</Description>
-        <Description label="个人网站">https://demowwwnet.cn</Description>
+        <Description label="电子邮件">admin@fh.com</Description>
+        <Description label="个人网站">https://zxuqian.cn</Description>
       </ContactSection>
       <Seperator
         css={`

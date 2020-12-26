@@ -15,4 +15,3 @@ const StyledSettings = styled.div`
 
 export default StyledSettings;
 export { StyledSettingsItem, SettingsItemControl, StyledSettingsGroup };
-

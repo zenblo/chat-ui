@@ -7,10 +7,10 @@ import VoiceMessage from "components/VoiceMessage";
 import Emoji from "components/Emoji";
 import Footer from "components/Footer";
 
-function Conversation({ children, ...rest }) {
+function Conversation({ onAvatarClick, onVideoClicked, children, ...rest }) {
   return (
     <StyledConversation {...rest}>
-      <TitleBar />
+      <TitleBar onVideoClicked={onVideoClicked} onAvatarClick={onAvatarClick} />
       <Conversations>
         <ChatBubble time="昨天 下午14：26">Hi 小宇，忙什么呢？</ChatBubble>
         <MyChatBubble time="昨天 下午16：30">
